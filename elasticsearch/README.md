@@ -1,7 +1,7 @@
 # Elasticsearch
 
-- 分词查询: `AnalyzeService`
-- 动态同义词配置: `resource\elasticsearch\settings\default.json`
+- 分词查询: [`AnalyzeService`](https://github.com/Houtaroy/java-samples/blob/main/elasticsearch/src/main/java/cn/houtaroy/java/samples/elasticsearch/AnalyzeService.java)
+- 动态同义词配置: [`default.json`](https://github.com/Houtaroy/java-samples/blob/main/elasticsearch/src/main/resources/elasticsearch/settings/default.json)
 
 ## 分词
 
