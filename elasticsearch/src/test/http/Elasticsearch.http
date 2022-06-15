@@ -1,0 +1,29 @@
+### 删除索引
+DELETE http://127.0.0.1:9200/articles
+
+### 查看索引mapping
+GET http://10.10.10.127:9200/trending/_all/_mapping
+
+### 分析
+GET http://127.0.0.1:9200/articles/_analyze
+Content-Type: application/json
+
+{
+  "analyzer": "default",
+  "text": "柯基"
+}
+
+### 搜索补齐建议器
+POST http://10.10.10.127:9200/trending/_search
+Content-Type: application/json
+
+{
+  "suggest": {
+    "name-suggest": {
+      "prefix": "张",
+      "completion": {
+        "field": "suggest"
+      }
+    }
+  }
+}

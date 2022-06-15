@@ -1,0 +1,40 @@
+### 查询
+GET http://localhost:9999/articles
+Content-Type: application/json
+
+### 根据id查看
+GET http://localhost:9999/articles/4
+Content-Type: application/json
+
+### 新增文章
+POST http://localhost:9999/articles
+Content-Type: application/json
+
+{
+  "id": "4",
+  "title": "测试2",
+  "author": "测试2",
+  "content": "测试2"
+}
+
+### 更新文章
+PUT http://localhost:9999/articles/4
+Content-Type: application/json
+
+{
+  "title": "测试3",
+  "author": "测试3",
+  "content": "测试3"
+}
+
+### 删除文章
+DELETE http://localhost:9999/articles/4
+Content-Type: application/json
+
+### 搜索
+GET http://localhost:9999/articles/search/2月
+Content-Type: application/json
+
+### 搜索并自定义排序
+GET http://localhost:9999/articles/search/2月?sort=_score,desc&sort=createTime,desc
+Content-Type: application/json

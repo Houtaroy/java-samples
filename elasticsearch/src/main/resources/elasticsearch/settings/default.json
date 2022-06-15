@@ -1,0 +1,23 @@
+{
+  "analysis": {
+    "analyzer": {
+      "default": {
+        "tokenizer": "ik_max_word",
+        "filter": [
+          "synonym"
+        ]
+      }
+    },
+    "filter": {
+      "synonym": {
+        "type": "dynamic_synonym_graph",
+        "synonym_type": "jdbc",
+        "interval": 10,
+        "driver_class_name": "com.mysql.cj.jdbc.Driver",
+        "uri": "jdbc:mysql://localhost:3306/elasticsearch?allowPublicKeyRetrieval=true",
+        "username": "test",
+        "password": "test@5015021301"
+      }
+    }
+  }
+}
